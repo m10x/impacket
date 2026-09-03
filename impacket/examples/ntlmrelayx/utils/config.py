@@ -111,8 +111,6 @@ class NTLMRelayxConfig:
         self.ShadowCredentialsPFXPassword = None
         self.ShadowCredentialsExportType = None
         self.ShadowCredentialsOutfilePath = None
-        self.ShadowCredentialsReplace = False
-        self.ShadowCredentialsBackupPath = None
 
         # SCCM attacks options
         self.isSCCMPoliciesAttack = False
@@ -275,15 +273,11 @@ class NTLMRelayxConfig:
     def setIsShadowCredentialsAttack(self, IsShadowCredentialsAttack):
         self.IsShadowCredentialsAttack = IsShadowCredentialsAttack
 
-    def setShadowCredentialsOptions(self, ShadowCredentialsTarget, ShadowCredentialsPFXPassword, ShadowCredentialsExportType,
-                                    ShadowCredentialsOutfilePath, ShadowCredentialsReplace=False,
-                                    ShadowCredentialsBackupPath=None):
+    def setShadowCredentialsOptions(self, ShadowCredentialsTarget, ShadowCredentialsPFXPassword, ShadowCredentialsExportType, ShadowCredentialsOutfilePath):
         self.ShadowCredentialsTarget = ShadowCredentialsTarget
         self.ShadowCredentialsPFXPassword = ShadowCredentialsPFXPassword
         self.ShadowCredentialsExportType = ShadowCredentialsExportType
         self.ShadowCredentialsOutfilePath = ShadowCredentialsOutfilePath
-        self.ShadowCredentialsReplace = ShadowCredentialsReplace
-        self.ShadowCredentialsBackupPath = ShadowCredentialsBackupPath
     
     def setIsSCCMPoliciesAttack(self, isSCCMPoliciesAttack):
         self.isSCCMPoliciesAttack = isSCCMPoliciesAttack
